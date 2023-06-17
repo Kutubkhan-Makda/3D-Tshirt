@@ -10,9 +10,11 @@ const Home = () => {
   return (
     <AnimatePresence>
       {snap.intro && (
-        <motion.div className='home' {...slideAnimation('left')}>
-
-        </motion.div>
+        <motion.section className='home' {...slideAnimation('left')}>
+          <motion.header {...slideAnimation('down')}>
+            <img src="./threejs.png" alt="logo" className='w-8 h-8 object-contain' />
+          </motion.header>
+        </motion.section>
       )}
     </AnimatePresence>
   )
