@@ -13,6 +13,7 @@ module.exports = {
     'react-refresh/only-export-components': 'warn',
     "react/jsx-uses-vars": "error",
     "react/jsx-uses-react": "error",
-    "react/no-unescaped-entities": 0
+    "react/no-unescaped-entities": 0,
+    "no-unused-vars": "off"
   },
 }
