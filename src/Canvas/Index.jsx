@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Index = () => {
+const Canvas = () => {
   return (
-    <div>Index</div>
+    <div>Canvas</div>
   )
 }
 
-export default Index
+export default Canvas
