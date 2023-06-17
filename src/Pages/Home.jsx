@@ -2,7 +2,7 @@ import React from 'react'
 import { motion,AnimatePresence } from 'framer-motion'
 import { useSnapshot } from 'valtio'
 import state from '../store'
-import { slideAnimation } from '../config/motion'
+import { headContainerAnimation, headTextAnimation, slideAnimation } from '../config/motion'
 
 const Home = () => {
   const snap = useSnapshot(state);
@@ -14,6 +14,13 @@ const Home = () => {
           <motion.header {...slideAnimation('down')}>
             <img src="./threejs.png" alt="logo" className='w-8 h-8 object-contain' />
           </motion.header>
+          <motion.div className='home-content' {...headContainerAnimation}>
+            <motion.div {...headTextAnimation}>
+              <h1 className='head-text'>
+                LET'S <br className='xl:block hidden'/>
+              </h1>
+            </motion.div>
+          </motion.div>
         </motion.section>
       )}
     </AnimatePresence>
