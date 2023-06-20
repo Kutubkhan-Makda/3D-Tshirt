@@ -26,7 +26,7 @@ const Home = () => {
                 Create your unique and exclusive shirt with our brand-new 3D customization tool. 
                 <strong>Unleash your imagination</strong>{" "} and define your own style.
               </p>
-              <CustomButton type="filled" title="Customize It" />
+              <CustomButton type="filled" title="Customize It" handelclick={()=>state.intro=false}/>
             </motion.div>
           </motion.div>
         </motion.section>
