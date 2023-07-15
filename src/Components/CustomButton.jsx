@@ -1,10 +1,15 @@
 import React from 'react'
+import { useSnapshot } from 'valtio'
+import state from '../store'
 
 const CustomButton = ({type,title,CustomStyles,hanleClick}) => {
+  const snap = useSnapshot(state)
+
   const generateStyle = (type) => {
     if(type === 'filled'){
       return {
         backgroundColor:'#000',
+        color:'#fff'
       }
     }
   }
