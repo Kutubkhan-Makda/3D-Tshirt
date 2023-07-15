@@ -4,7 +4,7 @@ const CustomButton = ({type,title,CustomStyles,hanleClick}) => {
   const generateStyle = (type) => {
     if(type === 'filled'){
       return {
-        
+        backgroundColor:'#000',
       }
     }
   }
