@@ -8,14 +8,14 @@ const CustomButton = ({type,title,CustomStyles,hanleClick}) => {
   const generateStyle = (type) => {
     if(type === 'filled'){
       return {
-        backgroundColor:'#000',
+        backgroundColor:snap.color,
         color:'#fff'
       }
     }
   }
 
   return (
-    <button className={`px-2 py-1.5 flex-1 rounded-md ${CustomStyles}`} style={generateStyle(type)}>
+    <button className={`px-2 py-1.5 flex-1 rounded-md ${CustomStyles}`} style={generateStyle(type)} onClick={hanleClick}>
       {title}
     </button>
   )
