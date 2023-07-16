@@ -7,7 +7,9 @@ const Customizer = () => {
 
   return (
     <AnimatePresence>
-      
+      {snap.intro && (
+        
+      )}
     </AnimatePresence>
   )
 }
