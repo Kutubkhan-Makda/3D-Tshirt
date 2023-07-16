@@ -3,6 +3,7 @@ import React from 'react'
 import { useSnapshot } from 'valtio'
 import state from '../store'
 import { motion } from 'framer-motion'
+import { slideAnimation } from '../config/motion'
 
 const Customizer = () => {
   const snap = useSnapshot(state);
@@ -11,7 +12,7 @@ const Customizer = () => {
     <AnimatePresence>
       {snap.intro && (
         <>
-        <motion.div>
+        <motion.div key="custom" className='absolute top-0 left-0 z-10' {...slideAnimation('left')}>
           
         </motion.div>
         </>
