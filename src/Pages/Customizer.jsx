@@ -3,9 +3,10 @@ import React from 'react'
 import { useSnapshot } from 'valtio'
 import state from '../store'
 import { motion } from 'framer-motion'
-import { slideAnimation } from '../config/motion'
+import { fadeAnimation, slideAnimation } from '../config/motion'
 import { EditorTabs } from '../config/constants'
 import Tab from '../Components/Tab'
+import CustomButton from '../Components/CustomButton'
 
 const Customizer = () => {
   const snap = useSnapshot(state);
@@ -20,6 +21,12 @@ const Customizer = () => {
               {EditorTabs.map((tab)=>(<Tab key={tab.name} tab={tab} handleClick={() => {}}/>))}
             </div>
           </div>
+        </motion.div>
+        <motion.div className='absolute z-10 top-5 right-5' {...fadeAnimation}>
+          <CustomButton type='filled' title='Go Back' handelclick={() => state.intro=true} CustomStyles='w-fit px-4 py-2.5 font-bold text-sm'/>
+        </motion.div>
+        <motion.div className='filtertabs-container'>
+
         </motion.div>
         </>
       )}
