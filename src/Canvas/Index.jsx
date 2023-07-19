@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Canvas = () => {
+const CanvasModel = () => {
   return (
     <div>Canvas</div>
   )
 }
 
-export default Canvas
+export default CanvasModel
