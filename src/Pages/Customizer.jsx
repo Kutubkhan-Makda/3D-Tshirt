@@ -5,6 +5,7 @@ import state from '../store'
 import { motion } from 'framer-motion'
 import { slideAnimation } from '../config/motion'
 import { EditorTabs } from '../config/constants'
+import Tab from '../Components/Tab'
 
 const Customizer = () => {
   const snap = useSnapshot(state);
@@ -16,7 +17,7 @@ const Customizer = () => {
         <motion.div key="custom" className='absolute top-0 left-0 z-10' {...slideAnimation('left')}>
           <div className='flex items-center min-h-screen'>
             <div className='editortabs-container tabs'>
-              {EditorTabs}
+              {EditorTabs.map((tab)=>(<Tab key={tab.name} tab={tab} handleClick={() => {}}/>))}
             </div>
           </div>
         </motion.div>
